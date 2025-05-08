@@ -1,0 +1,150 @@
+/*to select classes from the html you start with a dot(.). 
+to select an id from html, you start with a #.
+when to use classe/id? a class can be reused across one page while an id can only be used once on each page.
+*/
+
+
+/*to style the header as a whole*/
+header {
+    display: flex; /*this format creates kind of a box there the content below gows to the left side of the first*/
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+/*I created a class inside the header to seperate the navigation buttons from the logo*/
+.primary-navigation ul {
+    display: flex; /*this format creates kind of a box there the content below gows to the left side of the first*/
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* this is to style the class where (a) reps links in html*/
+.primary-navigation a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.primary-navigation a:hover,
+.primary-navigation a:focus {
+    color: purple;
+}
+
+body {
+    font-family: serif;
+    font-size: 1.25rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+}
+
+h2 {
+    color: orange;
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+/*styling links*/
+a {
+    color: rgb(31, 177, 31);
+}
+
+/*styling how links react*/
+a:hover,
+a:focus-visible {
+    color: purple;
+}
+
+/*to make images to be responsive*/
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+
+/* styling lists(ul/ol)*/
+ul {
+    color: ;
+    list-style: ;
+    list-style-position: ;
+}
+
+/* styling lists(li)*/
+li { 
+    color: ;
+}
+
+/* styling lists bullects and numbers*/
+li::marker {
+    color: ;
+}
+
+/* styling lists bullects and numbers - whatever is inside the quotes in content will replace the bullets on the website*/
+ul li::marker {
+    content: circle;
+}
+
+/* to wrap the page not to stretch wider with the screen, we add a div class inside the body and giving them an inline-size(best 1000px)*/
+.wrapper {
+    max-inline-size: 1000px;
+    margin-inline: auto; /*to center everything inside the page regardless of the screen size*/
+}
+
+section {
+    margin-block: 100px;
+}
+
+/*to create columns;*/
+.two-column-layout {
+    display: flex; /*this creates the grid format itself*/
+    gap: 60px;
+    padding: 60px;
+    margin-inline-end: 60px;
+ /* grid-template-columns: 1fr 1fr; this creates cetween columns*/
+
+    /*this is to make the images or any media inside to be responsive*/
+    @media (width > 600px) {
+        grid-template-columns: 1fr 1fr; /*if this is put inside the media instead of on the class .two-column-layout, it tells the image and the text to go above each other according to their order*/
+    }
+}
+
+
+.teal-text {
+    color: #087a98;
+}
+
+
+.teal-bg {
+    color: white;
+    background-color: #087a98;
+    padding: 20px;
+    border: #0b4a5a solid 10px;
+}
+/*styling an element<strong> inside of a class
+.teal-bg strong {
+    color: yellow;
+}*/
+
+/*adding background image*/
+.climber-bg {
+    color: white;
+    background-image: url(/images/simple-steps.jpg);
+    padding: 24px;
+    border: #087a98 solid 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: auto;
+
+}
+
+/* setting the footer*/
+footer {
+    text-align: center;
+}
